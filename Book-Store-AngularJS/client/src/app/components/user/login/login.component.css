@@ -1,0 +1,10 @@
+.login-form {
+  margin: 135px auto;
+}
+
+.form {
+  position: relative;
+  width: 550px;
+  margin: 65px auto;
+  padding: 50px 60px 70px 60px;
+}

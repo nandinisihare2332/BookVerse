@@ -1,0 +1,32 @@
+h1 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 50px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-top: 50px;
+  color: #ffffff;
+}
+
+.books-home {
+  margin: 30px auto;
+}
+
+.panel h2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  margin: 40px 0 20px;
+  text-align: center;
+  color: #263a30;
+  letter-spacing: 1px;
+}
+.panel h2::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 4px;
+  margin: 8px auto 0;
+  background-color: #EBC77A; /* your gold accent */
+  border-radius: 2px;
+}
+

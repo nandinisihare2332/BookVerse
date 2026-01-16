@@ -1,0 +1,8 @@
+.form {
+  position: relative;
+  width: 700px;
+  margin: 65px auto;
+  padding: 50px 60px 70px 60px;
+  background-color: #fff;
+  border-radius: 15px;
+}

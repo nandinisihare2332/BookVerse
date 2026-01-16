@@ -1,0 +1,54 @@
+<nav class="topnav" [class.active]="menuOpen">
+    <div class="logo">
+    <i style="margin-top: 15px; color: #EBC77A;"  class="fa-solid fa-book-open"></i>   
+  <span style="margin-left: 60px;">BookVerse</span>
+</div>
+
+  <a style="margin-left: 65px;" routerLinkActive="active" routerLink="/home">Home</a>
+  <a routerLinkActive="active" routerLink="/book/store/default">Book Store</a>
+  <ng-template [ngIf]="isUserLogged()">
+    <!-- <a routerLinkActive="active"  routerLink="/user/profile/mine">My Profile</a>
+    <a routerLinkActive="active" routerLink="/user/purchaseHistory">My Purchase History</a> -->
+    <a  routerLinkActive="active"*ngIf="isUserAdmin()" routerLink="/book/create">Create Book</a>
+  </ng-template>
+  <div class="search-container">
+    <form #formDir="ngForm" [formGroup]="searchForm" (ngSubmit)="onSubmit()">
+      <input type="text" name="query" placeholder="title, author, genre, ISBN..." formControlName="query" />
+      <button type="submit" [disabled]="searchForm.invalid"><i class="fa fa-search"></i></button>
+    </form>
+  </div>
+  <div class="nav-right">
+    <ng-template [ngIf]="!isUserLogged()">
+      <a class="register" class="menu-item-right" routerLink="/user/register">Register</a>
+      <a class="login" class="menu-item-right" routerLink="/user/login">Login</a>
+    </ng-template>
+<ng-template [ngIf]="isUserLogged()">
+  <div class="auth-section">
+    <div class="user-menu">
+      <a class="cart" routerLinkActive="active" routerLink="/user/cart">Cart ({{cartItems}})</a>
+      <button class="user-button" (click)="toggleUserMenu()">
+          <span class="user-avatar">{{ user.username }}</span>
+          <span class="dropdown-arrow"> ▼</span>
+      </button>
+
+      <div class="user-dropdown" *ngIf="userMenuOpen">
+        <div class="dropdown-header">
+      {{ user.username }}
+    </div>
+        
+        <a routerLink="/user/profile/mine" class="dropdown-item">
+          <i class="fa-solid fa-circle-user"></i> My Profile
+        </a>
+        <a routerLink="/user/purchaseHistory" class="dropdown-item">
+          <i class="fa-solid fa-bag-shopping"></i> My Purchases
+        </a>
+        <button class="dropdown-item logout-btn" (click)="logout()">
+           <i class="fa-solid fa-right-from-bracket"></i>Logout
+        </button>
+      </div>
+    </div>
+  </div>
+</ng-template>
+
+  </div>
+</nav>

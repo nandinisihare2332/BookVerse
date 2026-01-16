@@ -1,0 +1,57 @@
+.books-store {
+  margin: 30px auto;
+}
+
+.top {
+  margin-top: 50px;
+}
+
+.bottom {
+  margin-bottom: 50px;
+}
+
+/* CENTER PAGINATION */
+ngx-pagination {
+  display: flex;
+  justify-content: center;
+  margin: 25px 0;
+}
+
+/* DEFAULT PAGE BUTTONS */
+ngx-pagination .ngx-pagination a,
+ngx-pagination .ngx-pagination button {
+  color: #ffffff;
+  background: #35574f;
+  padding: 7px 12px;
+  margin: 0 4px;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* HOVER EFFECT */
+ngx-pagination .ngx-pagination a:hover {
+  background-color: #EBC77A;
+  color: #1a1a1a;
+}
+
+/* ACTIVE PAGE */
+ngx-pagination .ngx-pagination .current {
+  background: #EBC77A;
+  color: #1a1a1a;
+  font-weight: 700;
+  padding: 7px 12px;
+  border-radius: 6px;
+}
+
+/* DISABLED (Previous/Next when hidden) */
+ngx-pagination .ngx-pagination .disabled {
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+/* REMOVE UGLY LIST DOTS */
+ngx-pagination .ngx-pagination {
+  list-style: none;
+}

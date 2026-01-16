@@ -1,0 +1,124 @@
+h1 {
+  margin-top: 40px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 38px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #ececec;
+}
+
+/* Main Cart Container */
+.shopping-cart {
+  width: 85%;
+  margin: 30px auto;
+  background: rgba(33, 49, 45, 0.9);
+  border-radius: 14px;
+  padding: 20px 25px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.35);
+}
+
+/* Dark card body */
+.card-body {
+  background-color: #3c524e;
+  border-radius: 10px;
+  padding: 20px;
+  color: #fff;
+}
+
+/* Cart Title + Price */
+h3 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 26px;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.total {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #EBC77A;
+  font-weight: bold;
+}
+
+/* Price text */
+.text-muted {
+  opacity: 0.8;
+  margin-left: 5px;
+}
+#book-price {
+  padding-top: 10px;
+}
+
+/* Quantity Input */
+.quantity {
+  float: left;
+  margin-right: 15px;
+  background-color: #DDD;
+  position: relative;
+  width: 85px;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.quantity input.qty {
+  border: none;
+  width: 100%;
+  height: 40px;
+  padding: 8px;
+  text-align: center;
+  font-size: 16px;
+  background: #fafafa;
+}
+
+/* Remove + Add buttons */
+.quantity input {
+  color: #1a1a1a;
+}
+
+/* Buttons */
+.btn {
+  font-size: 15px !important;
+  padding: 8px 16px !important;
+  margin-left: 8px;
+  border-radius: 6px !important;
+  font-family: 'Poppins', sans-serif;
+}
+
+.btn-success {
+  background-color: #2ecc71 !important;
+  border: none;
+}
+.btn-success:hover {
+  background-color: #27ae60 !important;
+}
+
+.btn-secondary {
+  background-color: #475c57 !important;
+  border: none;
+}
+.btn-secondary:hover {
+  background-color: #3e504c !important;
+}
+
+/* Hover effect */
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+}
+
+/* Empty Cart Image */
+.no-receipts,
+.no-results {
+  margin: 13em 0;
+}
+
+/* Add fade animation */
+.shopping-cart, .card-body {
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
