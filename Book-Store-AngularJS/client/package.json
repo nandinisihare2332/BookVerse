@@ -1,6 +1,9 @@
 {
   "name": "book-store-client",
   "version": "0.0.0",
+  "engines": {
+  "node": "16.x"
+   },
   "description": "Angular client for Book Store Web App",
   "author": "Jeliozver",
   "license": "MIT",
